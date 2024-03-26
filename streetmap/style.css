@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+#map1-container {
+    position: relative;
+}
+
+#map1 {
+    height: 99vh; /* 80% van de viewport hoogte voor de eerste kaart */
+    width: 100%; /* Volledige breedte voor de eerste kaart */
+}
+
+#whiteBox {
+    position: absolute; /* Absoluut positioneren */
+    top: 10px; /* Afstand vanaf de bovenkant van map1-container */
+    left: 10px; /* Afstand vanaf de linkerkant van map1-container */
+    width: 150px; /* Breedte van het witte vak */
+    height: 100px; /* Hoogte van het witte vak */
+    background-color: white; /* Achtergrondkleur van het witte vak */
+    z-index: 1000; /* Zorg ervoor dat het vak bovenop de kaart ligt */
+    border: 2px solid black;
+}
+
+#map2 {
+    height: 40%; /* 20% van de viewport hoogte voor de tweede kaart */
+    width: 20%; /* 30% van de viewport breedte voor de tweede kaart */
+    position: absolute; /* Absoluut positioneren */
+    top: 8px; /* Afstand vanaf de bovenkant van het scherm */
+    right: 8px; /* Afstand vanaf de rechterkant van het scherm */
+    z-index: 1000; /* Zorg ervoor dat de tweede kaart bovenop de eerste ligt */
+}
+
+#nextButton {
+    position: absolute; /* Absoluut positioneren */
+    top: calc(100px + 20px); /* 100px voor de witte box en 20px extra ruimte */
+    left: 10px; /* Afstand vanaf de linkerkant van map1-container */
+    z-index: 1000; /* Zorg ervoor dat de knop bovenop de kaart ligt */
+}
+#whiteBox2 {
+    position: absolute;
+    top: 10px; /* Aanpassen aan de gewenste positie */
+    right: 21%; /* Aanpassen aan de gewenste positie */
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    z-index: 1000;
+    border: 2px solid black;
+}
+#endGameBox {
+	display: none;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    z-index: 1500;
+}
