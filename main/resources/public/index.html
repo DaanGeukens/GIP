@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuessr Variant</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+	<script src="script.js" defer="true"></script> 
+    
+<!--     voor naar website te gaan localhost:8080 -->
+
+</head>
+<body>
+
+<div id="startScreen">
+    <h1>Welkom bij GeoGuessr Variant</h1>
+    <div id="roundInputTekst">
+    <label for="roundsInput">Aantal Rondes:</label>
+    </div>
+    <input type="number" id="roundsInput" min="1" max="10" value="5">
+    <div id="playerNameInput">
+        <label for="playerName">Spelersnaam:</label>
+        <input type="text" id="playerName" placeholder="Voer je naam in">
+    </div>
+    <button id="startGameButton">Start het spel</button>
+    <button id="settingsButton">Instellingen</button>
+</div>
+
+<div id ="map1-container">
+    <div id="map1"></div>
+    <div id="whiteBox">
+    	<div id="distance">Afstand tot stad: </div>
+    	<div id="score">Score deze ronde: </div>
+    	<div id="totalScore">Totale score: </div>
+    </div>
+    <div id="whiteBox2">
+    	<div id="vorigelocatie" >Vorige locatie: </div>
+    	<div id="aantalLocaties">Ronde: </div>
+ 	</div>
+    	<button id="nextButton" style="display: none;">Volgende ronde</button>
+    </div>
+    <div id="map2"></div>
+    <div id="distanceDisplay"></div>
+    <div id="endGameBox">
+    <p>Spel voorbij! Totale score: <span id="finalScore"></span> punten</p>
+    </div>
+    
+    <div id="settingsOverlay">
+    <div id="settingsContent">
+        <!-- Voeg hier je instellingsopties toe -->
+        <h2>Instellingen</h2>
+        <label for="languageSelect">Taal:</label>
+        <select id="languageSelect">
+            <option value="nl">Nederlands</option>
+            <option value="en">Engels</option>
+            <!-- Voeg hier andere taalopties toe -->
+        </select>
+        <!-- Voeg hier andere instellingen toe -->
+        <button id="closeSettingsButton">Sluiten</button>
+    </div>
+</div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
