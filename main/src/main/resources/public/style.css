@@ -1,0 +1,187 @@
+@charset "ISO-8859-1";
+
+
+#startScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+#startScreen h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+#startScreen button {
+    margin-bottom: 10px; /* Ruimte onder de knoppen */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startScreen button:hover {
+    background-color: #0056b3;
+}
+
+#startGameButton {
+    margin-bottom: 10px; /* Ruimte onder de knop */
+}
+
+#settingsButton {
+    margin-top: 10px; /* Ruimte boven de knop */
+}
+
+#roundsInput {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#startGameButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startGameButton:hover {
+    background-color: #0056b3;
+}
+
+#playerNameInput {
+    margin-bottom: 20px;
+}
+
+#playerName {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+#playerName:focus {
+    border-color: #007bff; /* Verander de randkleur wanneer het veld actief is */
+}
+
+#roundsInput {
+	margin-bottom: 2Opx;
+}
+
+#settingsOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparante achtergrond */
+    z-index: 3000; /* Zorg ervoor dat het overlay-venster bovenop alles ligt */
+}
+
+#settingsContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+#closeSettingsButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closeSettingsButton:hover {
+    background-color: #0056b3;
+}
+
+#map1-container {
+    position: relative;
+}
+
+#map1 {
+    height: 99vh; /* 80% van de viewport hoogte voor de eerste kaart */
+    width: 100%; /* Volledige breedte voor de eerste kaart */
+}
+
+#whiteBox {
+    position: absolute; /* Absoluut positioneren */
+    top: 10px; /* Afstand vanaf de bovenkant van map1-container */
+    left: 10px; /* Afstand vanaf de linkerkant van map1-container */
+    width: 200px; /* Breedte van het witte vak */
+    height: 100px; /* Hoogte van het witte vak */
+    background-color: #c0c0c0; /* Achtergrondkleur van het witte vak */
+    z-index: 1000; /* Zorg ervoor dat het vak bovenop de kaart ligt */
+    border: 2px solid black;
+}
+
+
+#map2 {
+    height: 40%; /* 20% van de viewport hoogte voor de tweede kaart */
+    width: 20%; /* 30% van de viewport breedte voor de tweede kaart */
+    position: absolute; /* Absoluut positioneren */
+    top: 8px; /* Afstand vanaf de bovenkant van het scherm */
+    right: 8px; /* Afstand vanaf de rechterkant van het scherm */
+    z-index: 1000; /* Zorg ervoor dat de tweede kaart bovenop de eerste ligt */
+}
+
+#nextButton {
+    position: absolute; /* Absoluut positioneren */
+    top: calc(100px + 20px); /* 133px voor de witte box en 20px extra ruimte */
+    left: 10px; /* Afstand vanaf de linkerkant van map1-container */
+    z-index: 1000; /* Zorg ervoor dat de knop bovenop de kaart ligt */
+    background-color: #c0c0c0;
+}
+#whiteBox2 {
+    position: absolute;
+    top: 10px; /* Aanpassen aan de gewenste positie */
+    right: 21%; /* Aanpassen aan de gewenste positie */
+    width: 200px;
+    height: 100px;
+    background-color: #c0c0c0;
+    z-index: 1000;
+    border: 2px solid black;
+}
+
+#endGameBox {
+	display: none;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c0c0c0;
+    padding: 20px;
+    border: 2px solid black;
+    z-index: 1500;
+}

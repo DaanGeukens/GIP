@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuessr Variant</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<div id ="map1-container">
+    <div id="map1"></div>
+    <div id="whiteBox">
+    	<div id="distance">Afstand tot stad: </div>
+    	<div id="score">Score deze ronde: </div>
+    	<div id="totalScore">Totale score: </div>
+    </div>
+    <div id="whiteBox2">
+    	<div id="aantalLocaties">Locatie:</div>
+ 	</div>
+    	<button id="nextButton" style="display: none;">Volgende kaart</button>
+    </div>
+    <div id="map2"></div>
+    <div id="distanceDisplay"></div>
+    <div id="endGameBox">
+    <p>Spel voorbij! Totale score: <span id="finalScore"></span> punten</p>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
